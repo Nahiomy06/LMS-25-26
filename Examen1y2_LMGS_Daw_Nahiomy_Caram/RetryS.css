@@ -1,0 +1,135 @@
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Titulo Titulo Titulo Titulo Titulo"
+    ". Main Main Main ."
+    ". Main Main Main ."
+    ". . . . .";
+}
+
+.Main {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 5px;
+  grid-auto-flow: row;
+  grid-area: Main;
+}
+
+.A1 {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Im1 Im1 Im1"
+    "Im1 Im1 Im1"
+    "T1 T1 T1";
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.Im1 { grid-area: Im1; }
+
+.T1 { 
+    grid-area: T1;
+    
+
+}
+h5{ 
+    color: rgb(175, 175, 175);
+   
+
+}
+
+
+.A2 {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Im2 Im2 Im2"
+    "Im2 Im2 Im2"
+    "T2 T2 T2";
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.Im2 { grid-area: Im2; }
+
+.T2 { grid-area: T2; }
+
+.A3 {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Im3 Im3 Im3"
+    "Im3 Im3 Im3"
+    "T3 T3 T3";
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.Im3 { grid-area: Im3; }
+
+.T3 { grid-area: T3; }
+
+.A4 {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Im4 Im4 Im4"
+    "Im4 Im4 Im4"
+    "T4 T4 T4";
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.Im4 { grid-area: Im4; }
+
+.T4 { grid-area: T4; }
+
+.A5 {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Im5 Im5 Im5"
+    "Im5 Im5 Im5"
+    "Im5 Im5 Im5";
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.Im5 { grid-area: Im5; }
+
+.Atw { grid-area: 2 / 3 / 3 / 4; }
+
+.A6 {  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Im6 Im6 T6 T6"
+    "Im6 Im6 T6 T6"
+    "Im7 Im7 T7 T7"
+    "Im7 Im7 T7 T7";
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.Im6 { grid-area: Im6; }
+
+.Im7 { grid-area: Im7; }
+
+.T6 { grid-area: T6; }
+
+.T7 { grid-area: T7; }
+
+.Titulo { grid-area: Titulo;
+
+}

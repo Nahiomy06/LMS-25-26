@@ -1,0 +1,104 @@
+.container {  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-template-rows: auto;
+  grid-auto-rows: 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "P1 P2 P3 P4 P5";
+  
+
+ 
+}
+
+.containerP{
+  container: 123;
+}
+
+.P1 {  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 60% 40%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "I1"
+    "T1";
+  grid-area: P1;
+}
+
+.I1 { grid-area: I1; }
+
+.T1 { grid-area: T1; }
+
+.P2 {  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 60% 40%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "I2"
+    "T2";
+  grid-area: P2;
+}
+
+.I2 { grid-area: I2; }
+
+.T2 { grid-area: T2; }
+
+.P3 {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60% 40%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "I3"
+    "T3";
+  grid-area: P3;
+}
+
+.I3 { grid-area: I3; }
+
+.T3 { grid-area: T3; }
+
+.P4 {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60% 40%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "I4"
+    "T4";
+  grid-area: P4;
+}
+
+.I4 { grid-area: I4; }
+
+.T4 { grid-area: T4; }
+
+.P5 {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60% 40%;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "I5"
+    "T5";
+  grid-area: P5;
+}
+
+.I5 { grid-area: I5; }
+
+.T5 { grid-area: T5; }
+
+p{
+  text-align: left;
+  font-size: 17px;
+  
+}
+
+image{
+  max-width: auto;
+  max-height: auto;
+  min-width: 15%;
+  min-height: 5%;
+}

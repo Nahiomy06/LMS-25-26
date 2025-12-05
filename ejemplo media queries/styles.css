@@ -1,0 +1,112 @@
+/* Estilos generales para todo el cuerpo de la página */
+    
+body {
+    /* Establece una fuente sans-serif para todo el texto */
+    font-family: Arial, sans-serif;
+    /* Elimina los márgenes por defecto del navegador */
+    margin: 0;
+    /* Elimina el relleno por defecto del navegador */
+    padding: 0;
+}
+
+/* Estilos para la cabecera */
+header {
+    /* Fondo oscuro para diferenciar la cabecera del resto */
+    background-color: #333;
+    /* Texto en color blanco para contraste */
+    color: white;
+    /* Espaciado interno para que el texto no toque los bordes */
+    padding: 1em;
+    /* Centra el texto horizontalmente */
+    text-align: center;
+}
+
+/* Estilos para la lista de navegación */
+nav ul {
+    /* Elimina los estilos predeterminados de lista (viñetas) */
+    list-style: none;
+    /* Elimina el margen y relleno predeterminados */
+    padding: 0;
+    /* Muestra los elementos en una fila horizontal */
+    display: flex;
+    /* Espaciado igual entre elementos */
+    justify-content: center;
+    /* Espacio entre los elementos */
+    gap: 1em;
+}
+
+/* Estilos para los enlaces de navegación */
+nav li a {
+    /* Color blanco para el texto de los enlaces */
+    color: white;
+    /* Elimina el subrayado predeterminado */
+    text-decoration: none;
+}
+
+/* Estilos para el contenido principal */
+main {
+    /* Espaciado interno para evitar que el texto toque los bordes */
+    padding: 1em;
+}
+
+/* Estilos para la sección de proyectos */
+.projects {
+    /* Usa flexbox para organizar los proyectos en fila */
+    display: flex;
+    /* Espacio entre los proyectos */
+    gap: 1em;
+}
+
+/* Estilos individuales para cada proyecto */
+.project {
+    /* Fondo claro para resaltar cada proyecto */
+    background-color: #ddd;
+    /* Espaciado interno para que el texto no toque los bordes */
+    padding: 1em;
+    /* Cada proyecto ocupa el mismo espacio dentro de la fila */
+    flex: 1;
+    /* Centra el texto dentro de cada proyecto */
+    text-align: center;
+}
+
+/* Estilos para el pie de página */
+footer {
+    /* Fondo oscuro para diferenciar del contenido principal */
+    background-color: #333;
+    /* Texto blanco para contraste */
+    color: white;
+    /* Centra el texto */
+    text-align: center;
+    /* Espaciado interno */
+    padding: 1em;
+}
+
+/* Media query para pantallas grandes (mínimo 1024px de ancho) */
+
+/* Media query para pantallas pequeñas (máximo 768px de ancho) */
+@media (max-width: 768px) {
+    /* Oculta el menú de navegación para simplificar la interfaz */
+    nav ul {
+        display: none;
+    }
+
+    /* Alinea la cabecera a la izquierda para dispositivos más pequeños */
+    header {
+        text-align: left;
+    }
+
+    /* Cambia la disposición de los proyectos a una sola columna */
+    .projects {
+        display: block;
+    }
+
+    /* Añade un margen entre cada proyecto para separarlos verticalmente */
+    .project {
+        margin-bottom: 1em;
+    }
+    body{
+        overflow-x: hidden;
+    
+    }
+    
+}

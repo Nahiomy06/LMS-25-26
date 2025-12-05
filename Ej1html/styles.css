@@ -1,0 +1,32 @@
+body {
+    background-color: rgb(245, 224, 224);
+}
+
+img {
+    width: 400px;
+    height: 400px;
+ 
+}
+h2 {
+    color: rgb(27, 9, 27);
+    background-color: rgb(255, 239, 242);
+}
+
+p {
+    color: #1d132e;
+    font-size: 20px;
+}
+
+.Samsung {
+     display: flex;
+    justify-content: right;
+}
+.Motorola {
+     display: flex;
+    justify-content: left;
+}
+.Keitai {
+     display: flex;
+    justify-content: center;
+}
+

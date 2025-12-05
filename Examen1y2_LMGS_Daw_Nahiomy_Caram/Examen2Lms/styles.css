@@ -1,0 +1,78 @@
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Endrick Toni Jese"
+    "Mercado Ad DosLin";
+}
+
+.Endrick {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Imagen1 Imagen1 Imagen1"
+    "Imagen1 Imagen1 Imagen1"
+    "-es impora -es impora -es impora";
+  grid-area: Endrick;
+}
+
+.-es impora { grid-area: -es impora; }
+
+.Imagen1 { grid-area: Imagen1; }
+
+.Toni {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Imagen2 Imagen2 Imagen2"
+    "Imagen2 Imagen2 Imagen2"
+    "Menos violento Menos violento Menos violento";
+  grid-area: Toni;
+}
+
+.Menos violento { grid-area: Menos violento; }
+
+.Imagen2 { grid-area: Imagen2; }
+
+.Mercado {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Imagen4 Imagen4 Imagen4"
+    "Imagen4 Imagen4 Imagen4"
+    "Musculoparair Musculoparair Musculoparair";
+  grid-area: Mercado;
+}
+
+.Imagen4 { grid-area: Imagen4; }
+
+.Musculoparair { grid-area: Musculoparair; }
+
+.Ad { grid-area: Ad; }
+
+.Jese {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Imagen3 Imagen3 Imagen3"
+    "Imagen3 Imagen3 Imagen3"
+    "Otrosorv Otrosorv Otrosorv";
+  grid-area: Jese;
+}
+
+.Imagen3 { grid-area: Imagen3; }
+
+.Otrosorv { grid-area: Otrosorv; }
+
+.DosLin { grid-area: DosLin; }
