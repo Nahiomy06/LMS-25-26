@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #A3966A;
+    margin: 0;
+}
+
+.header {
+
+    background-color: #482E1D;
+    padding: 20px;
+    text-align: center;
+    
+}
+h1{
+    color: #f0daae;
+}
+h2{
+        color: #442D1C;
+    }
+nav{
+    background-color: #f0daae;
+}
+nav a{
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    width: 20%;
+    color: #482E1D;
+}
+
+.gridGaleria{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 300px;
+
+}
+
+

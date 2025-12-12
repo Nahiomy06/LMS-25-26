@@ -1,0 +1,65 @@
+body{
+    background-color: black;
+}
+
+
+.container {
+    display: grid; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 60%; 
+  grid-template-rows: 1.5fr 0.3fr 0.7fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Main"
+    "tree"
+    "tree"; 
+}
+
+
+.tree {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 20% 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "Text Text Text"
+    "Im3 Im4 Im5"; 
+  grid-area: tree; 
+}
+
+.Im3 { grid-area: Im3; }
+
+.Im4 { grid-area: Im4; }
+
+.Im5 { grid-area: Im5; }
+
+.Text { grid-area: Text; }
+
+.Main {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 15% 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "T1 T1"
+    "Im1 Im2"; 
+  grid-area: Main; 
+}
+.main h1{
+    font-size: 80px;
+
+}
+
+.T1 { grid-area: T1; }
+
+.Im1 { grid-area: Im1; }
+
+.Im2 { grid-area: Im2; }
+
+
+h1{
+    color: white;
+    font-size: 60px;
+    font-style: italic;
+
+}

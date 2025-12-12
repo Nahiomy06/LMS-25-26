@@ -1,0 +1,232 @@
+
+
+
+
+/* Estilos simples para el examen - nivel bajo */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f3e9d2; /* beige claro */
+    font-family: Arial, sans-serif;
+}
+
+/* Contenedor general */
+.page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    background-color: #e5ddc5; /* beige más oscuro */
+}
+
+/* HERO / CABECERA */
+.hero-banner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: #6b4f3f;       /* marrón medieval */
+    border: 3px solid #8b5a2b;       /* marrón oscuro */
+    margin-bottom: 20px;
+    padding: 10px;
+    gap: 10px;
+    color: #fefce8;                  /* amarillo claro */
+}
+
+.hero-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 2px solid #c9b490;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+.hero-title {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.hero-subtitle {
+    font-size: 14px;
+}
+
+/* TÍTULOS DE BLOQUE (TABLA, GALERÍA, GRID) */
+.row-title {
+    margin: 10px 0 6px 0;
+}
+
+.row-label {
+    font-weight: bold;
+    font-size: 15px;
+    color: #5b4230;                    /* marrón */
+    border-left: 4px solid #b91c1c;    /* granate */
+    padding-left: 8px;
+}
+
+/* TABLA */
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 16px;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f9f5e7;        /* beige muy claro */
+    font-size: 13px;
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid #8b5a2b;
+    padding: 6px 8px;
+    text-align: left;
+}
+
+.info-table thead {
+    background-color: #b91c1c;        /* granate */
+    color: #fefce8;
+}
+
+/* GALERÍA DE IMÁGENES */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    background-color: #d1c1a3;        /* beige/marrón */
+    border: 1px solid #8b5a2b;
+    padding: 4px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* GRID PRINCIPAL (PLATOS) */
+.grid-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: #d1c1a3;        /* beige/marrón */
+    border: 1px solid #8b5a2b;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 6px;
+}
+
+.card-tall {
+    height: 180px;
+    background-color: #c4a96a;        /* tono más amarillento */
+}
+
+.card-img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-bottom: 1px solid #8b5a2b;
+}
+
+.card-text {
+    font-size: 13px;
+    text-align: center;
+    color: #3b2f23;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #3f3f46;         /* gris oscuro */
+    color: #f9f5e7;
+    padding: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-text {
+    font-size: 12px;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; 
+    }
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+
+    .grid-row{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+    table, thead, tbody, tr, th, td {
+        display: block;
+        width: 100%;
+    }
+    thead {
+        display: none; /* Oculta encabezados en móvil */
+    }
+
+    tr {
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+
+    td {
+        border: none;
+        padding: 5px 0;
+    }
+
+}
+
+@media (min-width: 1400px) {
+
+    body {
+        overflow-x: hidden; 
+    }
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    .gallery{
+        display: grid;
+        grid-template-columns: repeat(6, 2fr);
+        gap: 16px;
+    }
+
+    .grid-row{
+        display: grid;
+        grid-template-columns: repeat(6, 2fr);
+        gap: 16px;
+    }
+
+
+}
