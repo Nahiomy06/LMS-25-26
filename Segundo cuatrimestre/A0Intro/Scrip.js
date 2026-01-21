@@ -59,3 +59,14 @@ Boton5.addEventListener('click', () => {
     var ResultadoVolumen = 3/4*pi*Radio*3;
     TextoPantalla.textContent = 'La circurferencia del Circulo es: ' + ResultadoCircunferencia + ', su Area es: ' + ResultadoArea + ' y su volumen si fuera una esfera es: ' + ResultadoVolumen;
 })
+
+Boton6.addEventListener('click', () => {
+    console.log('El botton 6 funciona correctamente');
+    var PrecioReal = parseInt(prompt("Hola! Por favor introduce el precio real: "));
+    var PrecioVenta = parseInt(prompt("Hola! Por favor introduce el precio de venta:"));
+    var Descuento = PrecioReal-PrecioVenta;
+    var PorcentajeDescuento =  Descuento/100;
+    TextoPantalla.textContent = 'El porcentaje de descuento es de: ' + PorcentajeDescuento;
+})
+Boton7.addEventListener(click)
+
