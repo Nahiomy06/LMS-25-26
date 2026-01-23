@@ -41,9 +41,9 @@ Boton3.addEventListener('click', () => {
     var Texto = "";
     for (let i = 1; i <= 20; i++) {
         
-    Texto = Texto.textContent = i + " ";
+    Texto = TextoPantalla.textContent = i + " ";
+
 }
-        TextoPantalla.textContent = Texto;
 
 
 });
