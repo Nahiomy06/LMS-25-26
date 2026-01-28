@@ -1,3 +1,7 @@
+
+document.addEventListener('DOMContentLoaded')
+
+
 const TextoPantalla = document.getElementById('mensaje');
 const Boton1 = document.getElementById('boton1');
 const Boton2 = document.getElementById('boton2');
@@ -77,6 +81,12 @@ Boton7.addEventListener('click', () => {
     TextoPantalla.textContent = Resultado
 
 });
+
+
+
+
+
+Boton13.addEventListener('')
 
 
 

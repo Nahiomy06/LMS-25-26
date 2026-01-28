@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica Event Listeners</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+ 
+    section {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+ 
+    #cajaColor {
+      width: 150px;
+      height: 80px;
+      background-color: lightblue;
+      margin-top: 10px;
+    }
+ 
+    #zonaHover {
+      width: 200px;
+      height: 80px;
+      background-color: #eee;
+      line-height: 80px;
+      text-align: center;
+      margin-top: 10px;
+      border: 1px solid #999;
+    }
+  </style>
+</head>
+<body>
+ 
+  <h1>Práctica de Event Listeners</h1>
+ 
+  <!-- DOMContentLoaded -->
+  <section>
+    <h2 id="titulo">Título original</h2>
+    <p id="estado"></p>
+  </section>
+ 
+  <!-- Click: contador -->
+  <section>
+    <h3>Contador</h3>
+    <button id="btnContador">Sumar</button>
+    <p>Valor: <span id="contador">0</span></p>
+  </section>
+ 
+  <!-- Click: cambiar color -->
+  <section>
+    <h3>Cambiar color</h3>
+    <button id="btnColor">Cambiar color</button>
+    <div id="cajaColor"></div>
+  </section>
+ 
+  <!-- Mouseover / Mouseout -->
+  <section>
+    <h3>Eventos de ratón</h3>
+    <div id="zonaHover">Pasa el ratón</div>
+    <p id="hoverMsg"></p>
+  </section>
+ 
+  <!-- Input -->
+  <section>
+    <h3>Evento input</h3>
+    <input type="text" id="texto" placeholder="Escribe algo">
+    <p>Eco: <span id="eco"></span></p>
+  </section>
+ 
+  <!-- Change -->
+  <section>
+    <h3>Evento change</h3>
+    <input type="text" id="textoConfirm" placeholder="Escribe y sal del campo">
+    <p id="confirmMsg"></p>
+  </section>
+ 
+  <!-- Teclado -->
+  <section>
+    <h3>Evento keydown</h3>
+    <p id="teclaMsg">Pulsa cualquier tecla</p>
+  </section>
+ 
+  <!-- Mixto -->
+  <section>
+    <h3>Evento mixto</h3>
+    <button id="btnBloqueado">Botón bloqueado</button>
+    <p id="bloqueadoMsg"></p>
+  </section>
+ 
+  <!-- JS -->
+  <script src="script.js"></script>
+ 
+</body>
+</html>
