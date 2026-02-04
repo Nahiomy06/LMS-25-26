@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //3
 
-document.addEventListener('click', () => {
+btnContador.addEventListener('click', () => {
     Vcontador++;
     contador.innerHTML = Vcontador;  
 })
@@ -30,7 +30,7 @@ document.addEventListener('click', () => {
 
 //4
 
-document.addEventListener('click', () => {
+.addEventListener('click', () => {
     
 
 
