@@ -7,6 +7,9 @@ const btnSumar = document.getElementById("btnSumar");
 const btnRestar = document.getElementById("btnRestar");
 const btnMultiplicar = document.getElementById("btnMultiplicar");
 const btnDividir = document.getElementById("btnDividir");
+const btnPotencia = document.getElementById("btnPotencia");
+const btnResto = document.getElementById("btnResto");
+
 const btnLimpiar = document.getElementById("btnLimpiar");
 
 //Zona donde mostramos el texto
@@ -66,6 +69,17 @@ function dividir(a, b){
     return a / b;
 }
 
+//Funcion Potencia
+function potencia(a, b){
+    return a ** b;
+}
+
+//Funcion Potencia
+function resto(a, b){
+    return a % b;
+}
+
+
 
 /**************************************
  * Paso 4
@@ -117,8 +131,10 @@ function ejecutarOperacion(operacion){
         return;
     }
 
+    
+
     //Si todo va bien
-    mostrarSalida(resultado, "Operacion realizada correctamente")
+    mostrarSalida(resultado.toFixed(2), "Operacion realizada correctamente")
 
 }
 
@@ -149,6 +165,16 @@ btnDividir.addEventListener("click", function (){
 
 })
 
+btnPotencia.addEventListener("click", function (){
+    ejecutarOperacion(potencia);
+
+})
+
+btnResto.addEventListener("click", function (){
+    ejecutarOperacion(resto);
+
+})
+
 /**************************************
  * Paso 7
  * Limpiar
@@ -171,7 +197,7 @@ btnLimpiar.addEventListener("click", function (){
 
 /**************************************
  * Paso 8
- * Limpiar
+ * salida
 **************************************/
 
 mostrarSalida("-", "Introduce dos numeros y selecciona una operacion")
