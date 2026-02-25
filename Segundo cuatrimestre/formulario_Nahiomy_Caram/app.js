@@ -1,14 +1,12 @@
-// ==============================
-// CAPTURA DEL DOM
-// ==============================
+// dopcumento y var
 
 const form = document.getElementById("formRegistro");
 const estadoTexto = document.getElementById("estadoTexto");
 const listaErrores = document.getElementById("listaErrores");
 
-// ==============================
-// FUNCIONES DE LECTURA
-// ==============================
+
+// Lectura
+//-- Estos toman el valor de un input de un id que yo les de despues y le sacan los espacios en blanco
 
 function leerCampoTexto(id) {
   return document.getElementById(id).value.trim();
@@ -22,9 +20,8 @@ function leerSelect(id) {
   return document.getElementById(id).value;
 }
 
-// ==============================
-// FUNCIONES DE INTERFAZ
-// ==============================
+
+//Interfaz
 
 function mostrarError(idError, mensaje) {
   document.getElementById(idError).textContent = mensaje;
@@ -39,9 +36,7 @@ function actualizarEstadoGeneral(texto, correcto) {
   estadoTexto.style.color = correcto ? "green" : "red";
 }
 
-// ==============================
-// VALIDACIONES INDIVIDUALES
-// ==============================
+// validaciones individuales
 
 function validarNombre() {
   const nombre = leerCampoTexto("nombre");
@@ -58,11 +53,13 @@ function validarNombre() {
 
 function validarApellidos() {
   const apellidos = leerCampoTexto("apellidos");
+  const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ ]{2,60}$/;
 
-  if (apellidos.length < 2 || apellidos.length > 60) {
-    mostrarError("errorApellidos", "Apellidos inválidos.");
+  if (!regex.test(apellidos)) {
+    mostrarError("errorApellidos", "Apellido inválido.");
     return false;
   }
+
 
   limpiarError("errorApellidos");
   return true;
@@ -176,9 +173,7 @@ function validarTerminos() {
   return true;
 }
 
-// ==============================
-// VALIDACIÓN GENERAL
-// ==============================
+// Validacion del formulario
 
 function validarFormulario() {
   const validaciones = [
@@ -197,9 +192,7 @@ function validarFormulario() {
   return validaciones.every(v => v === true);
 }
 
-// ==============================
-// RESUMEN DE ERRORES
-// ==============================
+// Errores
 
 function generarResumenErrores() {
   listaErrores.innerHTML = "";
@@ -219,9 +212,8 @@ function generarResumenErrores() {
   }
 }
 
-// ==============================
-// LIMPIAR FORMULARIO
-// ==============================
+
+// Limpiar
 
 function limpiarFormulario() {
   const errores = document.querySelectorAll(".error");
@@ -231,9 +223,8 @@ function limpiarFormulario() {
   actualizarEstadoGeneral("Pendiente de validación", false);
 }
 
-// ==============================
-// EVENTOS
-// ==============================
+
+//Formulario 
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -251,3 +242,25 @@ form.addEventListener("submit", function (e) {
 document.getElementById("btnReset").addEventListener("click", function () {
   limpiarFormulario();
 });
+
+
+
+
+
+//Notas de regex = patrones
+/* 
+^ -> inicio de una cadena.
+$ -> fin de la cadena.
+(?=.*) lookahead positivo -> un patrón es precedido o seguido por otro patrón.
+(?=.*[a-z]) -> debe tener  al menos una letra minuscula.
+(?=.*[A-Z]) -> debe tener  al menos una letra mayuscula.
+(?=.*\d) -> debe tener  almenos un digito.
+\d -> digito entre 0-9.
+(?=.*[\W_]) -> debe tener almenos un caracter especial.
+\W -> Cualquier caracter que no sea letra o numero.
+_ -> incluye al guion bajo como caracter especial.
+. -> despues del lookahead cualquier caracter
+{8,} -> Minimo 8 characteres
+
+
+*/
