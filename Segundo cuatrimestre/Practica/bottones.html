@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ejercicios JavaScript con botones</title>
+</head>
+
+<body>
+
+<h1>Ejercicios JavaScript con botones</h1>
+
+<!-- EJERCICIO 1 -->
+<h2 id="texto">Hola mundo</h2>
+<button onclick="cambiarTexto()">Cambiar texto</button>
+
+<hr>
+
+<!-- EJERCICIO 2 -->
+<button onclick="cambiarColor()">Cambiar color de fondo</button>
+
+<hr>
+
+<!-- EJERCICIO 3 -->
+<h2>Contador: <span id="contador">0</span></h2>
+<button onclick="sumar()">Sumar +1</button>
+
+<hr>
+
+<!-- EJERCICIO 4 -->
+<button onclick="mostrarMensaje()">Mostrar mensaje</button>
+
+<hr>
+
+<!-- EJERCICIO 5 -->
+<p id="fecha"></p>
+<button onclick="mostrarFecha()">Mostrar fecha</button>
+
+<hr>
+
+<!-- EJERCICIO 6 -->
+<p id="parrafo">Este texto se puede ocultar.</p>
+<button onclick="ocultar()">Ocultar texto</button>
+
+<!-- 7 Mostrar texto -->
+<button onclick="mostrar()">Mostrar texto</button>
+
+<hr>
+
+<!-- 8 Sumar dos números -->
+<h3>Sumar números</h3>
+
+<input type="number" id="n1">
+<input type="number" id="n2">
+
+<button onclick="sumarNumeros()">Sumar</button>
+
+<p id="resultado"></p>
+
+<hr>
+
+<!-- 9 Multiplicar -->
+<button onclick="multiplicar()">Multiplicar</button>
+
+<hr>
+
+<!-- 10 Cambiar tamaño del texto -->
+<p id="textoGrande">Texto que cambiará de tamaño</p>
+
+<button onclick="agrandar()">Agrandar texto</button>
+
+<hr>
+
+<!-- 11 Mostrar hora -->
+<p id="hora"></p>
+
+<button onclick="mostrarHora()">Mostrar hora</button>
+
+<hr>
+
+<!-- 12 Adivinar número -->
+<h3>Adivina el número (1-10)</h3>
+
+<input type="number" id="intento">
+
+<button onclick="adivinar()">Intentar</button>
+
+<p id="resultadoJuego"></p>
+
+
+<script>
+
+// EJERCICIO 1
+function cambiarTexto() {
+    document.getElementById("texto").innerHTML = "El texto ha cambiado!";
+}
+
+// EJERCICIO 2
+function cambiarColor() {
+    document.body.style.backgroundColor = "lightblue";
+}
+
+// EJERCICIO 3
+let numero = 0;
+function sumar() {
+    numero++;
+    document.getElementById("contador").innerHTML = numero;
+}
+
+// EJERCICIO 4
+function mostrarMensaje() {
+    alert("Hola! Has presionado el botón");
+}
+
+// EJERCICIO 5
+function mostrarFecha() {
+    document.getElementById("fecha").innerHTML = new Date();
+}
+
+// EJERCICIO 6
+function ocultar() {
+    document.getElementById("parrafo").style.display = "none";
+}
+
+
+// EJERCICIO 7
+function mostrar(){
+document.getElementById("parrafo").style.display="block";
+}
+
+// EJERCICIO 8
+function sumarNumeros(){
+
+let a=document.getElementById("n1").value;
+let b=document.getElementById("n2").value;
+
+let resultado=parseInt(a)+parseInt(b);
+
+document.getElementById("resultado").innerHTML="Resultado: "+resultado;
+}
+
+// EJERCICIO 9
+function multiplicar(){
+
+let a=document.getElementById("n1").value;
+let b=document.getElementById("n2").value;
+
+let resultado=a*b;
+
+document.getElementById("resultado").innerHTML="Resultado: "+resultado;
+}
+
+// EJERCICIO 10
+function agrandar(){
+document.getElementById("textoGrande").style.fontSize="40px";
+}
+
+// EJERCICIO 11
+function mostrarHora(){
+document.getElementById("hora").innerHTML=new Date().toLocaleTimeString();
+}
+
+let numeroSecreto=Math.floor(Math.random()*10)+1;
+
+// EJERCICIO 12
+function adivinar(){
+
+let intento=document.getElementById("intento").value;
+
+if(intento==numeroSecreto){
+document.getElementById("resultadoJuego").innerHTML="Correcto!";
+}else{
+document.getElementById("resultadoJuego").innerHTML="Intenta otra vez";
+}
+
+}
+
+
+</script>
+
+</body>
+</html>

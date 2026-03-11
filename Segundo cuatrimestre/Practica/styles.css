@@ -1,14 +1,19 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f3f5f8;
     color: #222b44;
     place-items: center;
     justify-items: center;  
-    background-image: url(Wallpaper\ Iphone.jpg);
+    background-image: url(Wallpaper.jpg);
     background-position: center center;
     background-repeat: repeat;
     background-size: contain;
+}
+
+main{
+    background: #f3f5f8;
+    border: 2px solid hsl(209, 53%, 57%);
+    border-radius: 25px;
 }
 
 header{
@@ -51,8 +56,4 @@ button{
 
 }
 
-.e1{
-    background-color: #f3f5f8;
-
-}
 
