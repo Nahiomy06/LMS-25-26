@@ -197,7 +197,7 @@ function validarFormulario() {
 function generarResumenErrores() {
   listaErrores.innerHTML = "";
 
-  const errores = document.querySelectorAll(".error");
+  const errores = document.querySelectorAll("Error");
 
   errores.forEach(error => {
     if (error.textContent !== "") {

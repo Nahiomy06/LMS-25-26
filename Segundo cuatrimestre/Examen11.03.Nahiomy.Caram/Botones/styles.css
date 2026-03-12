@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #222b44;
+    place-items: center;
+    justify-items: center;  
+    background-image: url(Wallpaper.jpg);
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+main{
+    background: #f3f5f8;
+    border: 2px solid hsl(209, 53%, 57%);
+    border-radius: 25px;
+}
+
+header{
+    margin: 0;
+    color: #222b44;
+    justify-items: center;  
+    align-items: center;     
+}
+
+.all{
+    max-width: 980px;
+    margin: 36px auto;
+    padding: 18px;
+}
+
+button{
+    padding: 10px 12px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    background: #5994cc;
+    color: white;
+}
+
+.Botones1a6{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+    justify-items: center;  
+
+}
+
+.Boton7{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+
+}
+
+
