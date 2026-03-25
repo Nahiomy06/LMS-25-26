@@ -35,27 +35,34 @@ function agregarTareaAlDOM(texto) {
 
     const btnAsisten = document.createElement("button");
     btnAsisten.textContent = "Asiste";
-    btnAsisten.classList.add("btn-accion");
+    btnAsisten.classList.add("btn-Asiste");
 
     const btnAusentes = document.createElement("button");
     btnAusentes.textContent = "No asiste";
-    btnAusentes.classList.add("btn-accion");
+    btnAusentes.classList.add("btn-Ausente");
 
     const btnEliminar = document.createElement("button");
     btnEliminar.textContent = "Eliminar";
-    btnEliminar.classList.add("btn-accion");
+    btnEliminar.classList.add("btn-Eliminar");
 
-    //Damos funcionalidad en el boton completar
+
 
     
     btnAsisten.addEventListener("click",
         function() {
-            //Toggle es un selector entre estilos existentes
-            li.classList.toggle("Asiste");
+            btnAsisten.classList.toggle("btn-Asiste-activo");
+            btnAusentes.classList.remove("btn-Ausente-activo")
+            li.classList.add("Asiste");
             actualizarContadores();
         }
     );
-     //Damos funcionalidad al botón eliminar
+    btnAusentes.addEventListener("click", 
+        function () {
+            btnAsisten.classList.remove("btn-Asiste-activo");
+            btnAusentes.classList.toggle("btn-Ausente-activo")
+            li.classList.remove("Asiste");
+            actualizarContadores();
+    });
     btnEliminar.addEventListener("click",
         function () {
             li.remove();
@@ -100,12 +107,12 @@ function actualizarTotal() {
 //Actualizar todos los contadores de tareas
 function actualizarContadores() {
     const tareas = listaTareas.children.length;
-    const completadas = document.querySelectorAll(".tarea.completada").length;
-    const pendientes = tareas - completadas;
+    const Asiste = document.querySelectorAll(".tarea.Asiste").length;
+    const Ausentes = tareas - Asiste;
 
     totalTareas.textContent = tareas;
-    AlumnosPresente.textContent = completadas;
-    AlumnosAusentes.textContent = pendientes;
+    AlumnosPresente.textContent = Asiste;
+    AlumnosAusentes.textContent = Ausentes;
 };
 
 //Creamos la función de vaciar lista para llamarla después
