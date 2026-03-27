@@ -71,7 +71,7 @@ body {
  
 .grupo-input input:focus {
   border-color: #db6ec9;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 0 0 4px rgba(235, 37, 209, 0.12);
 }
  
 .botones {
