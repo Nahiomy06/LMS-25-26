@@ -1,0 +1,130 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    input, button {
+      margin: 5px;
+      padding: 5px;
+    }
+    .libro {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📚 Biblioteca</h1>
+
+  <!-- Añadir libro -->
+  <h2>Añadir libro</h2>
+  <input id="titulo" placeholder="Título">
+  <input id="autor" placeholder="Autor">
+  <input id="categoria" placeholder="Categoría">
+  <input id="isbn" placeholder="ISBN">
+  <button onclick="agregarLibro()">Añadir</button>
+
+  <!-- Buscar -->
+  <h2>Buscar</h2>
+  <input id="busqueda" placeholder="Buscar por título">
+  <button onclick="buscarLibro()">Buscar</button>
+
+  <!-- Lista -->
+  <h2>Catálogo</h2>
+  <div id="listaLibros"></div>
+
+  <script>
+    let biblioteca = [];
+
+    function mostrarLibros(lista) {
+      let contenedor = document.getElementById("listaLibros");
+      contenedor.innerHTML = "";
+
+      lista.forEach((libro, index) => {
+        contenedor.innerHTML += `
+          <div class="libro">
+            <strong>${libro.titulo}</strong><br>
+            Autor: ${libro.autor}<br>
+            Categoría: ${libro.categoria}<br>
+            ISBN: ${libro.isbn}<br>
+            Estado: ${libro.disponible ? "Disponible" : "Prestado"}<br>
+            <button onclick="prestarLibro(${index})">Prestar</button>
+          </div>
+        `;
+      });
+    }
+
+    function agregarLibro() {
+      let titulo = document.getElementById("titulo").value;
+      let autor = document.getElementById("autor").value;
+      let categoria = document.getElementById("categoria").value;
+      let isbn = document.getElementById("isbn").value;
+
+      if (!titulo || !autor || !categoria || !isbn) {
+        alert("Rellena todos los campos");
+        return;
+      }
+
+      let nuevoLibro = {
+        titulo,
+        autor,
+        categoria,
+        isbn,
+        disponible: true
+      };
+
+      biblioteca.push(nuevoLibro);
+      mostrarLibros(biblioteca);
+    }
+
+    function buscarLibro() {
+      let texto = document.getElementById("busqueda").value.toLowerCase();
+
+      let resultado = biblioteca.filter(libro =>
+        libro.titulo.toLowerCase().includes(texto)
+      );
+
+      mostrarLibros(resultado);
+    }
+
+    function prestarLibro(index) {
+      if (biblioteca[index].disponible) {
+        biblioteca[index].disponible = false;
+      } else {
+        alert("Ya está prestado");
+      }
+
+      mostrarLibros(biblioteca);
+    }
+
+    // Datos iniciales de prueba
+    biblioteca.push({
+      titulo: "1984",
+      autor: "Orwell",
+      categoria: "Distopía",
+      isbn: "123",
+      disponible: true
+    });
+
+    biblioteca.push({
+      titulo: "El Quijote",
+      autor: "Cervantes",
+      categoria: "Clásico",
+      isbn: "456",
+      disponible: true
+    });
+
+    mostrarLibros(biblioteca);
+  </script>
+
+</body>
+</html>
+```
