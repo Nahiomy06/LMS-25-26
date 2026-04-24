@@ -1,8 +1,8 @@
 const tarjetas = document.querySelectorAll(".card");
 const listaCarrito = document.querySelector("#cartList"); 
 const totalPrecio = document.querySelector("#totalPrice"); 
-const formularioDescuento = document.querySelector("#dicountForm"); 
-const inpuDescuento = document.querySelector("#discountCode");
+const formularioDescuento = document.querySelector("#discountForm"); 
+const inputDescuento = document.querySelector("#discountCode");
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || []; //Nuevo y añadido(entendi :3)
 let descuentoAplicado = 0;
@@ -31,7 +31,7 @@ tarjetas.forEach(tarjeta => {
     botonAñadir.addEventListener("click", () => {
         const id = tarjeta.dataset.id;
         const nombre = tarjeta.dataset.name;
-        const precio = parseFloat(tarjeta.dataset.precio);
+        const precio = parseFloat(tarjeta.dataset.price);
         anadirAlCarrito(id, nombre, precio);
     });
 });
@@ -96,7 +96,7 @@ function eliminarDelCarito(id) {
 if (formularioDescuento){
     formularioDescuento.addEventListener("submit", function(evento){
         evento.preventDefault();
-        const codigo = inpuDescuento.value.trim().toUpperCase();
+        const codigo = inputDescuento.value.trim().toUpperCase();
 
         if(codigo === "PIZZA10"){
             descuentoAplicado = 10;
