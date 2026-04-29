@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practica</title>
+  <link rel="stylesheet" href="styles.css">
+    <script src="login.js"></script>
+
+</head>
+<body>
+    <div class="pagina">
+        <header class="cabecera">
+            <nav class="nav container">
+                <a class="brand" href="index.html" aria-label="Ir a inicio">
+                <img class="brand__logo" src="logo.jpg" alt="Logo" />
+                <span class="brand__text">Prueba</span>
+            </a>
+
+            <div class="nav__links">
+                <a class="nav__link" href="carrito.html">Carrito</a>
+                <button id="toggle-tema" class="btn-tema">Cambiar a tema oscuro</button>
+            </div>
+        </header>
+
+        <main class="contenedor">
+            <section class="principal">
+                <h2> Bienvenidos</h2>
+                <p>Esta interfaz servira como ejemplo practico sobre como cambiar dinamicamente la apariencia de la pagina de una web usandp JS para seleccionar estilos CSS.</p>
+            </section>
+
+            <section class="grid" aria-label="Listado de pizzas">
+      <!-- Card 01 -->
+      <article class="card" data-id="p01" data-name="Margarita Clásica" data-price="8.50">
+        <img class="card__img" src="pizza1.jpg" alt="Pizza Margarita Clásica" />
+        <div class="card__body">
+          <h3 class="card__title">Margarita Clásica</h3>
+          <p class="card__meta"><span class="price">8,50 €</span> · Tomate, mozzarella, albahaca</p>
+          <div class="card__actions">
+            <button class="btn btn--primary" type="button" data-action="add">Añadir</button>
+            <button class="btn btn--ghost" type="button" data-action="remove">Eliminar</button>
+            <button class="btn btn--secondary" type="button" data-action="customize">Personalizar</button>
+          </div>
+        </div>
+      </article>
+
+        </main>
+    </div>
+<script src="script.js"></script>
+</body>
