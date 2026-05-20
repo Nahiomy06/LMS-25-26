@@ -46,8 +46,8 @@ tarjetas.forEach(tarjeta => {
 
     btnAñadir.addEventListener("click", () => {
         const id = tarjeta.dataset.id;
-        const nombre = tarjeta.dataset.name;
-        const precio = parseFloat(tarjeta.dataset.price);
+        const nombre = tarjeta.dataset.nombre;
+        const precio = parseFloat(tarjeta.dataset.precio);
         añadidoAlCarrito(id, nombre, precio)
     });
 });
@@ -63,12 +63,12 @@ function mostrarCarrito(){
             <span>${producto.nombre}</span>
             <span>${producto.precio} €</span>
             <span>${producto.cantidad}</span>
-            <button class = "btn-eliminar" data-id = "${producto.id}"> Eliminar </botton>
+            <button class = "btn-eliminar" data-id = "${producto.id}"> Eliminar </button>
         </li>
         `;
     });
 
-    const btnEliminar = document.querySelectorAll("btn-eliminar");
+    const btnEliminar = document.querySelectorAll(".btn-eliminar");
 
     btnEliminar.forEach(boton => {
         boton.addEventListener("click", () => {
@@ -95,7 +95,7 @@ function calcularTotal(){
 
 
 function eliminarDelCarito(id){
-    const posicion = carrito.findIndex(producto => producto.is === id);
+    const posicion = carrito.findIndex(producto => producto.id === id);
 
     if (posicion != -1){
         if(carrito[posicion].cantidad > 1){
